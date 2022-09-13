@@ -52,6 +52,7 @@ TODO: not sure where this went
 Any circle in $S^2$ lies in a plane $ax + by + ct = d$
 
 Stereographic projection from $\mathbf n$ takes $(x, y, t)$ to $\ds z = \frac{x + iy}{1 - t}$
+
 $$
 \begin{align*}
 \abs{z}^2 &= \bar z z \\
@@ -61,21 +62,27 @@ $$
 &= \frac{1 + t}{1 - t}
 \end{align*}
 $$
+
 So
+
 $$
 \begin{align*}
 t &= \frac{\abs{z}^2 - 1}{\abs{z}^2 + 1} \\
 1 - t &= \frac{2}{\abs{z}^2 + 1}
 \end{align*}
 $$
+
 Based on our definitions, we know that
+
 $$
 \begin{align*}
 x &= \dfrac{1}{2} (z + \bar z)(1 - t) \\
 y &= \dfrac{1}{2} (z - \bar z)(1 - t)
 \end{align*}
 $$
+
 so considering our plane equation, we have
+
 $$
 \begin{align*}
 ax + by + ct &= d \\
@@ -84,6 +91,5 @@ a \dfrac{1}{2} (z + \bar z) \frac{2}{\abs{z}^2 + 1} + b \dfrac{1}{2} (z - \bar z
 a(z + \bar z) + b(z - \bar z) + c(\abs{z}^2 - 1) &= d(\abs{z}^2 + 1)
 \end{align*}
 $$
-
 
 TODO: umm uhh ummmm
