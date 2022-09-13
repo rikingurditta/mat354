@@ -1,3 +1,5 @@
+# Complex Functions
+
 $$
 \newcommand{\ds}{\displaystyle}
 
@@ -7,8 +9,6 @@ $$
 \newcommand{\curlies}[1]{\left\{ #1\right\}}
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 $$
-
-# Complex Functions
 
 ## Linear functions
 

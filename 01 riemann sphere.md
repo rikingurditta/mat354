@@ -1,3 +1,5 @@
+# The Riemann Sphere
+
 $$
 \newcommand{\ds}{\displaystyle}
 
@@ -7,12 +9,6 @@ $$
 \newcommand{\curlies}[1]{\left\{ #1\right\}}
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 $$
-
-
-
-
-
-# The Riemann Sphere
 
 Want to extend $\C$ to $\infty$ - what properties do we want to preserve?
 
