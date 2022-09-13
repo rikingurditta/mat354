@@ -1,4 +1,4 @@
-# MAT354 - Complex Analysis I
+# MAT354 - Complex Analysis 1
 
 Fall 2022 session, taught by [Edward Bierstone](https://www.math.toronto.edu/bierston/).
 
