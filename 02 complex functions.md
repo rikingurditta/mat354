@@ -8,13 +8,14 @@ $$
 
 \newcommand{\curlies}[1]{\left\{ #1\right\}}
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\conj}[1]{\overline{#1}}
 $$
 
 ## Linear functions
 
 A function $T: \C \to \C$ is linear if there is some $a \in \C$ so that $T(z) = az$
 
-These functions are a composition of a rotation (i.e. if $\abs a = 1$) and a dilation (scaling)  (since $|a| > 0$)
+These functions are a composition of a rotation and a scaling, i.e. $a = rs$ where $\abs r = 1$ (rotation) and $s \geq 0$ (scaling).
 
 $\C$-linear functions are a subset of $\R$-linear functions:
 
@@ -74,8 +75,64 @@ R_1(z) = R(1/z) &= \frac{a_0 z^m + ... + a_m}{b_0 z^n + ... + b_m} (z^{n-m})
 \end{align*}
 $$
 
-So if $n > m$, then $R$ has a zero of order $n-m$ at $\infty$, and if $n < m$ then $R$ has a pole of order $m - n$ at $\infty$ (since those are the orders of the poles/zeroes of $R_1(z)$). If $n = m$ then $\ds R(\infty) = \frac{a_m}{b_n} \neq 0$ (since $a_m \neq 0$ by assumption).
+So if $n > m$, then $R$ has a zero of order $n-m$ at $\infty$, and if $n < m$ then $R$ has a pole of order $m - n$ at $\infty$ (since those are the orders of the poles/zeroes of $R_1(z)$). If $n = m$ then $R(\infty) = \dfrac{a_m}{b_n} \neq 0$ (since $a_m \neq 0$ by assumption).
 
 So the total number of zeroes (counting multiplicity) of $R$ in the Riemann sphere, including at infinity, is $\max(m, n)$, and the number of poles is also $\max(m, n)$. This number is called the **order** of $R$.
 
-So if a rational function $R$ has $k$ roots (and $k$ poles), then $R(z) = a$ has $k$ solutions.
+So if a rational function $R$ has $k$ roots (and $k$ poles), then $R(z) = a$ has $k$ solutions in the Riemann sphere.
+
+### Examples
+
+#### Fractional linear transformations
+
+$$
+S(z) = \frac{az + b}{cz + d},\ ad-bc \neq 0
+$$
+
+A rational function of order 1 is called a **fractional linear transformation** (or a **Möbius transformation**)
+
+Any equation $S(z) = w$ has exactly one root
+
+#### Translations
+
+$$
+S(z) = z + a
+$$
+
+$S(z)$ is a translation with one fixed point, $\infty$
+
+### Partial fraction decomposition
+
+Consider a rational function
+
+$$
+R(z) = \frac{P(z)}{Q(z)}
+$$
+
+First do long division until $\deg P(z) \leq \deg Q(z)$, so that we have $P(z) = G(z) Q(z) + \tilde H(z)$ where $G(z)$ is a polynomial and $\deg \tilde H(z) \leq \deg Q$. Define $H(z) = \dfrac{\tilde H(z)}{Q(z)}$, then
+
+$$
+R(z) = G(z) + H(z)
+$$
+
+Then $\deg G(z)$ is the order of $R$'s pole at $\infty$, and we call $G(z)$ the **singular part** of $R(z)$.
+
+Let $\beta_1, ..., \beta_q$ be distinct finite poles of $R(z)$, i.e. for all $j$ we have $Q(\beta_j) = 0$ and $\beta_j \neq \infty$. Then for any $i$, $R \left( \beta_j + \dfrac{1}{\zeta} \right)$ is a rational function of $\zeta$, and we can write it as
+
+$$
+R\left( \beta_j + \frac{1}{\zeta} \right) = G_j(\zeta) + H_j(\zeta)
+$$
+
+Taking $z = \beta_j + \dfrac{1}{\zeta}$, we can write $\zeta = \dfrac{1}{z - \beta_j}$, so we have
+
+$$
+R(z) = G_j\left( \frac{1}{z - \beta_j} \right) + H_j\left( \frac{1}{z - \beta_j} \right)
+$$
+
+TODO: complete proof - Ahlfors 1.4
+
+#### Real rational functions
+
+Complex roots  of a real polynomial always occur in conjugate pairs, so when looking at poles of $R(z)$ we will have to pair the $\beta_j, \beta_k$ where $\beta_j = \conj{\beta_k}$
+
+We can take the complex partial fraction decomposition and add the terms for conjugate roots, and we'll end up with real terms
