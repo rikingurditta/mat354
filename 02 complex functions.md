@@ -136,3 +136,25 @@ TODO: complete proof - Ahlfors 1.4
 Complex roots  of a real polynomial always occur in conjugate pairs, so when looking at poles of $R(z)$ we will have to pair the $\beta_j, \beta_k$ where $\beta_j = \conj{\beta_k}$
 
 We can take the complex partial fraction decomposition and add the terms for conjugate roots, and we'll end up with real terms
+
+### Classification of order-2 rational functions
+
+Want to classify order-2 rational functions up to change of coordinates by FLTs
+
+Let $f$ be an order 2 rational function. There are 2 cases for the poles of $f$ - 1 double pole $\beta$ or 2 distinct poles $\alpha, \beta$
+
+Double pole case:
+
+$f\left(1 + \dfrac{1}{\zeta}\right)$ has a double pole at $\zeta = \infty$. Since its only poles are at infinity, it must be a polynomial, so
+
+$$
+\begin{align*}
+f\left(1 + \frac{1}{\zeta}\right) = w &= a\zeta^2 + b\zeta + c \\
+w &= a \left(\zeta - \frac{b}{2a}\right)^2 + c - \frac{b^2}{4a} \\
+\frac{w - c + \frac{b^2}{4a}}{a} &= \left(\zeta - \frac{b}{2a}\right)^2
+\end{align*}
+$$
+
+Now, if we apply fractional linear transformations to both the left hand side (a function of $w$) and the right hand side (a function of $z$), we can change coordinates to $w = z^2$. So every rational function of order 2 can be transformed to look like $f(z) = z^2$.
+
+Distinct poles case:
