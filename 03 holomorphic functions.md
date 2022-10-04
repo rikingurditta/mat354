@@ -100,10 +100,25 @@ $$
 \end{align*}
 $$
 
-### If $f$ is holomorphic and $f' = 0$, then $f$ is constant
+## If $f$ is holomorphic and $f' = 0$, then $f$ is constant
 
 (consider one connected component of the domain of $f$)
 
 $$
 df = \partials{f}{z} dz + \partials{f}{\conj z} d\conj z
 $$
+
+## If $f$ is holomorphic on a connected open set $\Omega$ and $\abs{f}$ is constant then $f$ is constant
+
+Suppose $\abs{f(z)} = c \in \R$ for all $z$, then
+$$
+\begin{align*}
+c^2 &= \abs{f(z)}^2 \\
+c^2 &= f(z) \conj{f(z)} \\
+\partials{(c^2)}{z} &= \partials{f}{z} \conj{f(z)} + f(z) \partials{\conj f}{z} \\
+0 &= \partials{f}{z} \conj{f(z)} + f(z) \partials{f}{\conj z} \\
+0 &= \partials{f}{z} \conj{f(z)} + f(z) (0) \tag{since $f$ is holomorphic} \\
+0 &= \partials{f}{z} \conj{f(z)}
+\end{align*}
+$$
+If $c = 0$ then $f = 0$, so $f$ is constant. If $c \neq 0$, then $f(z) \neq 0$, so $\conj{f(z)} \neq 0$ for any $z$, so we must have $\ds \partials{f}{z} = 0$.
