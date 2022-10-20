@@ -9,3 +9,8 @@ Fall 2022 session, taught by [Edward Bierstone](https://www.math.toronto.edu/bie
 1. [Holomorphic Functions](03 holomorphic functions)
 1. [idk](04 idk)
 1. [Power Series](05 power series)
+1. [Mapping Properties of Holomorphic Functions](06 mapping properties)
+1. ........
+1. [not sure](08 not sure)
+
+[misc notes](misc)
